@@ -1,6 +1,6 @@
 @import 'vars';
 @import 'node_modules/normalize-scss/sass/normalize/import-now';
-@import 'node_modules/bourbon/app/assets/stylesheets/bourbon';
+@import 'node_modules/bourbon/core/bourbon';
 @import 'base';
 @import 'type';
 @import 'animation';
@@ -19,7 +19,7 @@
         margin-left: $base-spacing;
 
         &:hover {
-            @include animation(pulse 1s);
+            animation: pulse 1s;
         }
 
         img {

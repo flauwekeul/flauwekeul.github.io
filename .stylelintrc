@@ -1,8 +1,9 @@
 {
   "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-order"
+  ],
   "rules": {
-    "indentation": 4,
-    "declaration-empty-line-before": "never",
-    "color-hex-case": "upper"
+    "order/properties-alphabetical-order": true
   }
 }
