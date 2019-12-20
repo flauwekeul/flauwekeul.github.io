@@ -5,7 +5,8 @@
   "main": "",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html",
+    "deploy": "sh deploy.sh"
   },
   "repository": {
     "type": "git",
