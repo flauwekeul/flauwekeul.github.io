@@ -1,0 +1,26 @@
+:root {
+  /*
+   * Colors
+   * Business Casual: https://kuler.adobe.com/Business-Casual-color-theme-5595/
+   */
+  --color-primary: #3a55b9;
+  --color-primary-dark: #102f65;
+  --color-primary-light: #7794e3;
+  --color-secondary: #f3cf13;
+  --color-tertiary: #be9c5e;
+  --color-light: #f4f0db;
+
+  /* Typography */
+  --font-stack-heading: 'Bree Serif', Georgia, serif;
+  --font-stack-copy: 'Open Sans', HelveticaNeue, Helvetica, Arial, sans-serif;
+
+  /* Layout */
+  --spacer-1: 1vmin;
+  --spacer-2: 2vmin;
+  --spacer-3: 4vmin;
+  --spacer-4: 6vmin;
+  --spacer-5: 12vmin;
+}
+
+// CSS vars can't be used inside media query
+$bp-large: 1000px;

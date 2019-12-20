@@ -1,52 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Abbe Keultjes's website</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-    <meta content="Abbe Keultjes. Front-end developer." name="description" />
-    <meta content="width=device-width" name="viewport" />
+    <title>Abbe Keultjes' website</title>
+    <meta content="Abbe Keultjes. Webdeveloper." name="description" />
 
+    <link href="//fonts.googleapis.com/css?family=Bree+Serif|Open+Sans" rel="stylesheet" type="text/css" />
+    <link href="/src/sass/index.scss" rel="stylesheet" />
     <link rel="icon" type="image/png" href="/public/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/public/favicon-16x16.png" sizes="16x16" />
-    <link href="//fonts.googleapis.com/css?family=Bree+Serif|Open+Sans" rel="stylesheet" type="text/css" />
-    <link href="/src/sass/main.scss" rel="stylesheet" />
 
     <script async src="//www.google-analytics.com/analytics.js"></script>
   </head>
   <body>
     <header class="site-header">
+      <img alt="logo abbekeultjes.nl" class="site-logo" src="/src/assets/logo.svg" />
       <div class="social-networks">
-        <a class="social-network-twitter" href="https://twitter.com/Flauwekeul" title="@Flauwekeul">
-          <img alt="@Flauwekeul" src="/src/assets/logo-twitter.svg" />
-        </a>
-        <a class="social-network-github" href="https://github.com/flauwekeul" title="flauwekeul @ GitHub">
+        <a
+          class="social-network social-network--github"
+          href="https://github.com/flauwekeul"
+          title="flauwekeul @ GitHub"
+        >
           <img alt="flauwekeul @ GitHub" src="/src/assets/logo-github.svg" />
         </a>
         <a
-          class="social-network-linkedin"
-          href="http://nl.linkedin.com/pub/abbe-keultjes/1a/232/2b8/"
+          class="social-network social-network--linkedin"
+          href="https://www.linkedin.com/in/abbekeultjes"
           title="Abbe Keultjes' LinkedIn"
         >
           <img alt="Abbe Keultjes' LinkedIn" src="/src/assets/logo-linkedin.svg" />
         </a>
       </div>
     </header>
-
-    <img alt="logo abbekeultjes.nl" class="site-logo" src="/src/assets/logo.svg" />
-
     <section class="page">
-      <div class="wrapper">
-        <hgroup class="site-title">
-          <h1>Abbe Keultjes</h1>
-          <h2>A Dutch frontend developer</h2>
-        </hgroup>
+      <hgroup class="site-title">
+        <h1>Abbe Keultjes</h1>
+        <h2>A Dutch frontend developer</h2>
+      </hgroup>
 
-        <p>
-          I ❤ JavaScript, HTML and (S)CSS. Currently a proud employee at
-          <a href="http://frontmen.nl/">Frontmen</a>.
-        </p>
-      </div>
+      <p>
+        I ❤ JavaScript, HTML and (S)CSS. Currently a proud employee at
+        <a href="http://frontmen.nl/">Frontmen</a>.
+      </p>
     </section>
 
     <script src="/src/js/google-analytics.js"></script>

@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  font-family: var(--font-stack-copy);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: var(--spacer-3);
+
+  @media screen and (min-width: $bp-large) {
+    font-size: 1.4rem;
+  }
+}
