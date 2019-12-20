@@ -6,6 +6,7 @@
 }
 
 .site-logo {
+  animation: slideInFromLeft 1s ease-in-out 1s backwards;
   min-width: 15vmin;
   width: 8vw;
 
@@ -16,6 +17,10 @@
 
 .site-title {
   margin-bottom: var(--spacer-4);
+}
+
+.social-networks {
+  animation: fadeIn 1s backwards;
 }
 
 .social-network {
@@ -33,6 +38,7 @@
 }
 
 .page {
+  animation: fadeIn 1s backwards;
   margin-left: auto;
   margin-right: auto;
 

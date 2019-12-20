@@ -1,8 +1,6 @@
 :root {
-  /*
-   * Colors
-   * Business Casual: https://kuler.adobe.com/Business-Casual-color-theme-5595/
-   */
+  // Colors
+  // Business Casual: https://kuler.adobe.com/Business-Casual-color-theme-5595/
   --color-primary: #3a55b9;
   --color-primary-dark: #102f65;
   --color-primary-light: #7794e3;
@@ -10,11 +8,11 @@
   --color-tertiary: #be9c5e;
   --color-light: #f4f0db;
 
-  /* Typography */
+  // Typography
   --font-stack-heading: 'Bree Serif', Georgia, serif;
   --font-stack-copy: 'Open Sans', HelveticaNeue, Helvetica, Arial, sans-serif;
 
-  /* Layout */
+  // Layout
   --spacer-1: 1vmin;
   --spacer-2: 2vmin;
   --spacer-3: 4vmin;
@@ -24,3 +22,20 @@
 
 // CSS vars can't be used inside media query
 $bp-large: 1000px;
+
+// Animations
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-200%) rotate(20deg);
+  }
+
+  80% {
+    transform: translateX(10%) rotate(-5deg);
+  }
+}
