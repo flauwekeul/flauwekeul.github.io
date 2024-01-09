@@ -1,9 +1,14 @@
 ---
+import '@fontsource/source-sans-3/variable-italic.css'
+import '@fontsource/source-sans-3/variable.css'
+import '@fontsource/source-serif-4/variable-italic.css'
+import '@fontsource/source-serif-4/variable.css'
+
 export interface Props {
-  title: string
+  title?: string
 }
 
-const { title } = Astro.props
+const { title = 'AbbeKeultjes.nl' } = Astro.props.frontmatter ?? Astro.props
 ---
 
 <!DOCTYPE html>
@@ -15,7 +20,7 @@ const { title } = Astro.props
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="bg-zinc-900 text-white font-serif">
     <slot />
   </body>
 </html>
