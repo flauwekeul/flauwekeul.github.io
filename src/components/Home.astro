@@ -1,0 +1,23 @@
+---
+import { shuffleArray } from "../utils";
+
+const FEATURES = [
+  'software engineer',
+  'aspiring functional programming guru',
+  'programming educator',
+  'dad of three',
+  'occasional cinephile',
+  'reader of books',
+  'listener of music',
+];
+
+const shuffledFeatures = shuffleArray(FEATURES).join(', ');
+---
+
+<main>
+	<h1>Abbe Keultjes</h1>
+	<p>In no particular order: {shuffledFeatures}.</p>
+</main>
+
+<style>
+</style>
