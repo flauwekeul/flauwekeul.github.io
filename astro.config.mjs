@@ -14,15 +14,14 @@ export default defineConfig({
       },
       {
         provider: fontProviders.google(),
-        name: 'Bitter',
-        cssVariable: '--font-bitter',
+        name: 'Fira Sans',
+        cssVariable: '--font-fira-sans',
         weights: [400, 700],
       },
     ],
   },
 
   vite: {
-    // @ts-expect-error: https://github.com/withastro/astro/issues/14030#issuecomment-3027129338
     plugins: [tailwindcss()],
   },
 });
