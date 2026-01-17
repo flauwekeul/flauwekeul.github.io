@@ -2,20 +2,20 @@
 import { Font } from 'astro:assets';
 
 type Props = {
-	title: string;
+  title: string;
 };
 
 const { title } = Astro.props;
 ---
 
-<Font cssVariable='--font-open-sans' preload />
-<Font cssVariable='--font-fira-sans' preload />
+<Font cssVariable="--font-open-sans" preload />
+<Font cssVariable="--font-fira-sans" preload />
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <title>{title}</title>
 
 <style>
-body {
+  body {
     font-family: var(--font-open-sans);
-}
+  }
 </style>

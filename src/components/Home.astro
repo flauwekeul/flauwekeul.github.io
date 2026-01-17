@@ -1,52 +1,58 @@
 ---
-import Link from "../components/Link.astro";
-import { shuffleArray, yearsSince } from "../utils";
+import Link from '../components/Link.astro';
+import { shuffleArray, yearsSince } from '../utils';
 
 const FEATURES = [
-  {text: 'software engineer', href: '#software-engineer'},
-  {text: 'aspiring functional programming guru', href: '#aspiring-functional-programming-guru'},
-  {text: 'software educator', href: '#software-educator'},
-  {text: 'dad of three', href: '#dad-of-three'},
-  {text: 'occasional cinephile', href: '#occasional-cinephile'},
-  {text: 'reader of books', href: '#reader-of-books'},
-  {text: 'listener of music', href: '#listener-of-music'},
+  { text: 'software engineer', href: '#software-engineer' },
+  { text: 'aspiring functional programming guru', href: '#aspiring-functional-programming-guru' },
+  { text: 'software educator', href: '#software-educator' },
+  { text: 'dad of three', href: '#dad-of-three' },
+  { text: 'occasional cinephile', href: '#occasional-cinephile' },
+  { text: 'reader of books', href: '#reader-of-books' },
+  { text: 'listener of music', href: '#listener-of-music' },
 ];
-const START_OF_PROFESSIONAL_CAREER = new Date('2007-08-01')
+const START_OF_PROFESSIONAL_CAREER = new Date('2007-08-01');
 
-const shuffledFeatures = shuffleArray(FEATURES).map(feature => feature.text).join(', ');
+const shuffledFeatures = shuffleArray(FEATURES)
+  .map((feature) => feature.text)
+  .join(', ');
 const yearsOfProfessionalCareer = yearsSince(START_OF_PROFESSIONAL_CAREER);
 ---
 
 <!-- todo: use https://tailwindcss-typography.vercel.app/ -->
 <article class="p-4 bg-linear-to-b from-blue-800 to-indigo-700 sm:hyphens-auto">
   <section class="mb-24">
-    <h1 class="font-serif text-7xl font-bold mx-auto my-12 text-yellow-300 text-shadow-lg sm:text-9xl">Abbe Keultjes</h1>
+    <h1 class="font-serif text-7xl font-bold mx-auto my-12 text-yellow-300 text-shadow-lg sm:text-9xl">
+      Abbe Keultjes
+    </h1>
     <p class="text-2xl text-white">
-      In no particular order:<br>
+      In no particular order:<br />
       <!-- todo: add links -->
       {shuffledFeatures}.
     </p>
   </section>
 
   <section class="mb-24">
-    <h2 id="software-engineer" class="font-serif text-4xl font-bold mb-8 text-yellow-200 text-shadow-md">Software engineer</h2>
+    <h2 id="software-engineer" class="font-serif text-4xl font-bold mb-8 text-yellow-200 text-shadow-md">
+      Software engineer
+    </h2>
     <p class="text-lg text-white mb-6">
       I’ve been writing software professionally for over
       <time
         datetime={START_OF_PROFESSIONAL_CAREER.toISOString()}
         title={`Since ${START_OF_PROFESSIONAL_CAREER.toLocaleDateString('en-UK', { year: 'numeric', month: 'long' })}`}
-        class="underline underline-offset-4 decoration-dotted">
+        class="underline underline-offset-4 decoration-dotted"
+      >
         {yearsOfProfessionalCareer} years
-      </time>,
-      with more than a decade focused on frontend development as a consultant.
-      I have a keen eye for detail and take a thorough approach to both my code and the solutions I deliver.
-      My primary languages are JavaScript and TypeScript and I’m very interested in functional programming languages such as Clojure, Haskell and F#.
+      </time>, with more than a decade focused on frontend development as a consultant. I have a keen eye for detail and
+      take a thorough approach to both my code and the solutions I deliver. My primary languages are JavaScript and
+      TypeScript and I’m very interested in functional programming languages such as Clojure, Haskell and F#.
     </p>
     <p class="text-lg text-white mb-6">
-      Code should be simple (<Link href="https://youtu.be/SxdOUGdseq4?si=uUW2jW2kYT_SDuYB" openInNewTab>not easy</Link>),
-      maintainable, and communicate its intent clearly.
-      That’s why I strongly prefer the functional programming paradigm: controlled side effects, immutable data, and functions as building blocks.
-      This approach helps me build systems that are easier to reason about, test, and evolve over time.
+      Code should be simple (<Link href="https://youtu.be/SxdOUGdseq4?si=uUW2jW2kYT_SDuYB" openInNewTab>not easy</Link
+      >), maintainable, and communicate its intent clearly. That’s why I strongly prefer the functional programming
+      paradigm: controlled side effects, immutable data, and functions as building blocks. This approach helps me build
+      systems that are easier to reason about, test, and evolve over time.
     </p>
   </section>
 </article>
