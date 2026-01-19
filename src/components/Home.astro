@@ -1,21 +1,19 @@
 ---
 import Link from '../components/Link.astro';
-import { shuffleArray, yearsSince } from '../utils';
+import { intercalate, shuffleArray, yearsSince } from '../utils';
 
 const FEATURES = [
   { text: 'software engineer', href: '#software-engineer' },
   { text: 'aspiring functional programming guru', href: '#aspiring-functional-programming-guru' },
-  { text: 'software educator', href: '#software-educator' },
-  { text: 'dad of three', href: '#dad-of-three' },
-  { text: 'occasional cinephile', href: '#occasional-cinephile' },
-  { text: 'reader of books', href: '#reader-of-books' },
-  { text: 'listener of music', href: '#listener-of-music' },
+  { text: 'software educator' },
+  { text: 'dad of three' },
+  { text: 'occasional cinephile' },
+  { text: 'reader of books' },
+  { text: 'listener of music' },
 ];
 const START_OF_PROFESSIONAL_CAREER = new Date('2007-08-01');
 
-const shuffledFeatures = shuffleArray(FEATURES)
-  .map((feature) => feature.text)
-  .join(', ');
+const shuffledFeatures = shuffleArray(FEATURES);
 const yearsOfProfessionalCareer = yearsSince(START_OF_PROFESSIONAL_CAREER);
 ---
 
@@ -27,8 +25,14 @@ const yearsOfProfessionalCareer = yearsSince(START_OF_PROFESSIONAL_CAREER);
     </h1>
     <p class="text-2xl text-white">
       In no particular order:<br />
-      <!-- todo: add links -->
-      {shuffledFeatures}.
+      {
+        intercalate(
+          shuffledFeatures.map((feature) =>
+            feature.href ? <Link href={feature.href}>{feature.text}</Link> : feature.text,
+          ),
+          ', ',
+        )
+      }.
     </p>
   </section>
 
@@ -43,16 +47,36 @@ const yearsOfProfessionalCareer = yearsSince(START_OF_PROFESSIONAL_CAREER);
         title={`Since ${START_OF_PROFESSIONAL_CAREER.toLocaleDateString('en-UK', { year: 'numeric', month: 'long' })}`}
         class="underline underline-offset-4 decoration-dotted"
       >
-        {yearsOfProfessionalCareer} years
-      </time>, with more than a decade focused on frontend development as a consultant. I have a keen eye for detail and
-      take a thorough approach to both my code and the solutions I deliver. My primary languages are JavaScript and
-      TypeScript and I’m very interested in functional programming languages such as Clojure, Haskell and F#.
+        {yearsOfProfessionalCareer} years</time
+      >, with more than a decade focused on frontend development as a consultant. I have a keen eye for detail and take
+      a thorough approach to both my code and the solutions I deliver. My primary languages are JavaScript and
+      TypeScript. Nowadays I’m focussing more on software architecture, especially through a functional programming
+      lens. I also enjoy coaching fellow programmers on coding, communication, and sharing knowledge effectively.
     </p>
     <p class="text-lg text-white mb-6">
       Code should be simple (<Link href="https://youtu.be/SxdOUGdseq4?si=uUW2jW2kYT_SDuYB" openInNewTab>not easy</Link
       >), maintainable, and communicate its intent clearly. That’s why I strongly prefer the functional programming
       paradigm: controlled side effects, immutable data, and functions as building blocks. This approach helps me build
       systems that are easier to reason about, test, and evolve over time.
+    </p>
+  </section>
+
+  <section class="mb-24">
+    <h2
+      id="aspiring-functional-programming-guru"
+      class="font-serif text-4xl font-bold mb-8 text-yellow-200 text-shadow-md"
+    >
+      Aspiring functional programming guru
+    </h2>
+    <p class="text-lg text-white mb-6">
+      Code should be simple (<Link href="https://youtu.be/SxdOUGdseq4?si=uUW2jW2kYT_SDuYB" openInNewTab>not easy</Link
+      >), maintainable, and communicate its intent clearly. That’s why I strongly prefer the functional programming
+      paradigm: controlled side effects, immutable data, and functions as building blocks. This approach helps me build
+      systems that are easier to reason about, test, and evolve over time.
+    </p>
+    <p class="text-lg text-white mb-6">
+      I’m drawn toward any language with a strong foundation in functional programming, but I have a soft spot for
+      Clojure and its community.
     </p>
   </section>
 </article>

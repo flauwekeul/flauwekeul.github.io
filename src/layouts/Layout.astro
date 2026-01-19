@@ -12,7 +12,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="motion-safe:scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -26,7 +26,7 @@ const { title } = Astro.props;
           alt="Abbe Keultjes"
           width={200}
           height={200}
-          class="photo-abbe block size-26 saturate-120 rounded-full outline-8 outline-blue-700"
+          class="block size-26 saturate-120 rounded-full outline-8 outline-blue-700"
         />
       </a>
     </nav>
@@ -35,23 +35,3 @@ const { title } = Astro.props;
     </main>
   </body>
 </html>
-
-<style>
-  .photo-abbe {
-    animation: dwindle ease-out;
-    animation-timeline: scroll();
-    animation-range: 0px 12rem;
-  }
-
-  @keyframes dwindle {
-    0% {
-      width: 200px;
-      height: 200px;
-      margin-left: 50%;
-      transform: translate(-50%, 40px);
-    }
-    100% {
-      transform: none;
-    }
-  }
-</style>
