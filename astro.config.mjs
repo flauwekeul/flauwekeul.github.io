@@ -18,9 +18,14 @@ export default defineConfig({
         cssVariable: '--font-fira-sans',
         weights: [400, 700],
       },
+      // fixme: can't get this to work yet
+      // {
+      //   provider: fontProviders.googleicons(),
+      //   name: 'Material Symbols Outlined',
+      //   cssVariable: '--font-material-symbols',
+      // }
     ],
   },
-
   vite: {
     plugins: [tailwindcss()],
   },

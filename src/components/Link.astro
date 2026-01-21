@@ -9,5 +9,8 @@ const target = openInNewTab ? '_blank' : null;
 const rel = openInNewTab ? 'noopener noreferrer' : null;
 ---
 
-<!-- todo: add icon for external link -->
-<a href={href} target={target} rel={rel} class="text-yellow-300 underline underline-offset-2"><slot /></a>
+<a href={href} target={target} rel={rel} class="text-yellow-300 underline underline-offset-2"
+  ><slot />{
+    openInNewTab && <span class="ml-1 icon icon-rounded text-[90%] align-middle text-yellow-300">open_in_new</span>
+  }</a
+>
