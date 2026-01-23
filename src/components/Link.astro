@@ -9,8 +9,10 @@ const target = openInNewTab ? '_blank' : null;
 const rel = openInNewTab ? 'noopener noreferrer' : null;
 ---
 
-<a href={href} target={target} rel={rel} class="text-yellow-300 underline underline-offset-2"
-  ><slot />{
-    openInNewTab && <span class="ml-1 icon icon-rounded text-[90%] align-middle text-yellow-300">open_in_new</span>
-  }</a
+<a
+  href={href}
+  target={target}
+  rel={rel}
+  class="text-teal-300 underline underline-offset-2 transition-colors hover:text-teal-200"
+  ><slot />{openInNewTab && <span class="ml-1 icon icon-rounded text-[90%] align-middle">open_in_new</span>}</a
 >

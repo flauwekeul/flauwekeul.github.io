@@ -19,14 +19,16 @@ const shuffledFeatures = shuffleArray(FEATURES);
 const yearsOfProfessionalCareer = yearsSince(START_OF_PROFESSIONAL_CAREER);
 ---
 
-<article class="sm:hyphens-auto">
-  <div class="bg-linear-to-b from-blue-800 to-indigo-800 pb-24">
-    <section class="p-4 mb-24">
-      <h1 class="font-serif text-7xl font-bold mx-auto my-12 text-yellow-300 text-shadow-lg sm:text-9xl">
+<article class="md:hyphens-auto">
+  <div class="w-full bg-linear-to-b from-blue-800 to-indigo-900 pb-24">
+    <section class="container mx-auto p-4 mb-24">
+      <h1
+        class="font-serif text-7xl font-bold mt-48 mb-20 text-yellow-300 text-shadow-lg sm:ml-36 sm:text-9xl md:text-[9rem] md:ml-48 md:mb-36 xl:max-w-fit xl:mx-auto"
+      >
         Abbe Keultjes
       </h1>
-      <p class="text-2xl text-white">
-        In no particular order:<br />
+      <p class="text-2xl/normal text-white md:text-3xl/normal">
+        In no particular order:
         {
           intercalate(
             shuffledFeatures.map((feature) =>
@@ -38,57 +40,67 @@ const yearsOfProfessionalCareer = yearsSince(START_OF_PROFESSIONAL_CAREER);
       </p>
     </section>
 
-    <section class="p-4 mb-24">
-      <h2 id="software-engineer" class="font-serif text-4xl font-bold mb-8 text-yellow-200 text-shadow-md">
+    <section class="container mx-auto p-4 mb-24">
+      <h2
+        id="software-engineer"
+        class="font-serif text-4xl font-bold mb-8 text-teal-200 text-shadow-md md:text-6xl/tight md:mb-12"
+      >
         Software engineer
       </h2>
-      <p class="text-lg text-white mb-6">
-        I’ve been writing software professionally for over
-        <time
-          datetime={START_OF_PROFESSIONAL_CAREER.toISOString()}
-          title={`Since ${START_OF_PROFESSIONAL_CAREER.toLocaleDateString('en-UK', { year: 'numeric', month: 'long' })}`}
-          class="underline underline-offset-4 decoration-dotted"
-        >
-          {yearsOfProfessionalCareer} years</time
-        >, with more than a decade focused on frontend development as a consultant. I have a keen eye for detail and
-        take a thorough approach to both my code and the solutions I deliver. My primary languages are JavaScript and
-        TypeScript. Nowadays I’m focussing more on software architecture, especially through a functional programming
-        lens. I also enjoy coaching fellow programmers on coding, communication, and sharing knowledge effectively.
-      </p>
-      <p class="text-lg text-white mb-6">
-        Code should be simple (<Link href="https://youtu.be/SxdOUGdseq4?si=uUW2jW2kYT_SDuYB" openInNewTab>not easy</Link
-        >), maintainable, and communicate its intent clearly. That’s why I strongly prefer the functional programming
-        paradigm: controlled side effects, immutable data, and functions as building blocks. This approach helps me
-        build systems that are easier to reason about, test, and evolve over time.
-      </p>
+      <div class="max-w-prose md:ml-auto">
+        <p class="text-lg text-white mb-8 md:text-2xl/normal md:mb-12">
+          I’ve been writing software professionally for over
+          <time
+            datetime={START_OF_PROFESSIONAL_CAREER.toISOString()}
+            title={`Since ${START_OF_PROFESSIONAL_CAREER.toLocaleDateString('en-UK', { year: 'numeric', month: 'long' })}`}
+            class="underline underline-offset-4 decoration-dotted"
+          >
+            {yearsOfProfessionalCareer} years</time
+          >, with more than a decade focused on frontend development as a consultant. I have a keen eye for detail and
+          take a thorough approach to both my code and the solutions I deliver. My primary languages are JavaScript and
+          TypeScript.
+        </p>
+        <p class="text-lg text-white mb-8 md:text-2xl/normal md:mb-12">
+          Nowadays I’m focussing more on software architecture, especially through a functional programming lens. I also
+          enjoy coaching fellow programmers on coding, communication, and sharing knowledge effectively.
+        </p>
+      </div>
     </section>
 
-    <section class="p-4">
+    <section class="container mx-auto p-4">
       <h2
         id="aspiring-functional-programming-guru"
-        class="font-serif text-4xl font-bold mb-8 text-yellow-200 text-shadow-md"
+        class="font-serif text-4xl font-bold mb-8 text-teal-200 text-shadow-md md:text-6xl/tight md:mb-12"
       >
         Aspiring functional programming guru
       </h2>
-      <p class="text-lg text-white mb-6">
-        Code should be simple (<Link href="https://youtu.be/SxdOUGdseq4?si=uUW2jW2kYT_SDuYB" openInNewTab>not easy</Link
-        >), maintainable, and communicate its intent clearly. That’s why I strongly prefer the functional programming
-        paradigm: controlled side effects, immutable data, and functions as building blocks. This approach helps me
-        build systems that are easier to reason about, test, and evolve over time.
-      </p>
-      <p class="text-lg text-white mb-6">
-        I’m drawn toward any language with a strong foundation in functional programming, but I have a soft spot for
-        Clojure and its community.
-      </p>
+      <div class="max-w-prose">
+        <p class="text-lg text-white mb-8 md:text-2xl/normal md:mb-12">
+          Code should be simple (<Link href="https://youtu.be/SxdOUGdseq4?si=uUW2jW2kYT_SDuYB" openInNewTab
+            >not easy</Link
+          >), maintainable, and communicate its intent clearly. That’s why I strongly prefer the functional programming
+          paradigm: controlled side effects, immutable data, and functions as building blocks. This approach helps me
+          build systems that are easier to reason about, test, and evolve over time.
+        </p>
+        <p class="text-lg text-white mb-8 md:text-2xl/normal md:mb-12">
+          I’m drawn toward any language with a strong foundation in functional programming, but I have a soft spot for
+          Clojure and its community.
+        </p>
+      </div>
     </section>
   </div>
 
   <section
-    class="relative pt-24 bg-slate-900 before:content-[''] before:absolute before:-top-[30px] before:left-0 before:w-0 before:h-0 before:border-t-30 before:border-t-transparent before:border-r-[100vw] before:border-r-slate-900"
+    class="relative pt-12 bg-slate-900 before:content-[''] before:absolute before:-top-[30px] before:left-0 before:w-0 before:h-0 before:border-t-30 before:border-t-transparent before:border-l-[100vw] before:border-l-slate-900 md:before:-top-[60px] md:before:border-t-60"
   >
-    <h2 id="dad-of-three" class="px-4 font-serif text-4xl font-bold mb-8 text-indigo-500 text-shadow-md">
-      Dad of three
-    </h2>
+    <div class="container mx-auto">
+      <h2
+        id="dad-of-three"
+        class="px-4 font-serif text-4xl font-bold mb-8 text-indigo-400 text-shadow-md md:text-6xl/tight md:mb-12"
+      >
+        Dad of three
+      </h2>
+    </div>
     <Image
       src={family}
       alt="Abbe Keultjes and his family"
