@@ -1,0 +1,18 @@
+---
+type Props = {
+  variant?: 'default' | 'large';
+  class?: string;
+};
+
+const { variant = 'default', class: className } = Astro.props;
+
+const baseClasses = 'text-white max-w-prose';
+const variantClasses = {
+  default: 'text-lg mb-8 md:text-2xl/normal md:mb-12',
+  large: 'text-2xl/normal md:text-3xl/normal',
+};
+---
+
+<p class:list={[baseClasses, variantClasses[variant], className]}>
+  <slot />
+</p>

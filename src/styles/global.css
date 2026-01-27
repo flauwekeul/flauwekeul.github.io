@@ -2,7 +2,6 @@
 @import '@savaryna/tailwindcss-material-symbols';
 
 @theme {
-  --font-sans: var(--font-open-sans);
-  /* todo: Fira Sans isn't a sans-serif font */
-  --font-serif: var(--font-fira-sans);
+  --font-sans: var(--font-fira-sans);
+  --font-serif: var(--font-aleo);
 }
