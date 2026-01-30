@@ -13,7 +13,7 @@ const FEATURES = [
     text: 'aspiring functional programming guru',
     href: '#aspiring-functional-programming-guru',
   },
-  { text: 'software educator' },
+  { text: 'software educator', href: '#software-educator' },
   { text: 'dad of three', href: '#dad-of-three' },
   { text: 'occasional cinephile' },
   { text: 'reader of books' },
@@ -27,7 +27,7 @@ const yearsOfProfessionalCareer = yearsSince(START_OF_PROFESSIONAL_CAREER);
 
 <article>
   <div class="w-full bg-linear-to-b from-blue-800 to-indigo-900 pb-24">
-    <section class="container mx-auto p-4 mb-48">
+    <section class="mx-auto p-4 mb-48 max-w-prose text-lg md:text-2xl md:p-8">
       <h1
         class="font-serif text-7xl font-bold mt-36 mb-16 text-yellow-300 text-shadow-lg sm:mt-56 sm:text-9xl md:text-[9rem] md:mb-36 xl:max-w-fit xl:mx-auto"
       >
@@ -46,7 +46,7 @@ const yearsOfProfessionalCareer = yearsSince(START_OF_PROFESSIONAL_CAREER);
       </Paragraph>
     </section>
 
-    <section class="container mx-auto p-4 mb-24">
+    <section class="mx-auto p-4 mb-24 max-w-prose text-lg md:text-2xl md:p-8">
       <Heading id="software-engineer">Software engineer</Heading>
       <Paragraph>
         I’ve been writing software professionally for over
@@ -56,42 +56,55 @@ const yearsOfProfessionalCareer = yearsSince(START_OF_PROFESSIONAL_CAREER);
             datetime={START_OF_PROFESSIONAL_CAREER.toISOString()}
             class="underline underline-offset-4 decoration-dotted">{yearsOfProfessionalCareer} years</time
           ></Tooltip
-        >, with more than a decade focused on frontend development as a consultant. I have a keen eye for detail and
-        take a thorough approach to both my code and the solutions I deliver. My primary languages are JavaScript and
-        TypeScript.
+        >, with more than a decade focused on frontend development as a consultant. I’m known for delivering robust,
+        well-considered implementations, combining a keen eye for detail with a thorough approach to both code and
+        problem-solving. My primary languages are JavaScript and TypeScript.
       </Paragraph>
       <Paragraph>
-        Nowadays I’m focussing more on software architecture, especially through a functional programming lens. I also
-        enjoy coaching fellow programmers on coding, communication, and sharing knowledge effectively.
+        My work combines hands-on development with careful attention to software architecture, with functional
+        programming playing a central role. I also enjoy coaching fellow programmers on coding practices, communication,
+        and sharing knowledge effectively.
       </Paragraph>
     </section>
 
-    <section class="container mx-auto p-4">
-      <Heading id="aspiring-functional-programming-guru">Aspiring functional programming guru</Heading>
+    <section class="mx-auto p-4 mb-24 max-w-prose text-lg md:text-2xl md:p-8">
+      <Heading id="aspiring-functional-programming-guru">Aspiring functional<br />programming guru</Heading>
       <Paragraph>
-        Code should be simple (<Link href="https://youtu.be/SxdOUGdseq4?si=uUW2jW2kYT_SDuYB" openInNewTab>not easy</Link
+        Code should be simple (<Link
+          href="https://youtu.be/SxdOUGdseq4?si=uUW2jW2kYT_SDuYB"
+          openInNewTab
+          tooltip="Rich Hickey on YouTube">not easy</Link
         >), maintainable, and communicate its intent clearly. That’s why I strongly prefer the functional programming
         paradigm: controlled side effects, immutable data, and functions as building blocks. This approach helps me
         build systems that are easier to reason about, test, and evolve over time.
       </Paragraph>
       <Paragraph>
-        I’m drawn toward any language with a strong foundation in functional programming, but I have a soft spot for
-        Clojure and its community.
+        I’m drawn toward any language with a strong foundation in functional programming (F#, Haskell, etc.), but I have
+        a soft spot for Clojure and its community.
+      </Paragraph>
+    </section>
+
+    <section class="mx-auto p-4 mb-24 max-w-prose text-lg md:text-2xl md:p-8">
+      <Heading id="software-educator">Software educator</Heading>
+      <Paragraph>
+        I’m a software educator with experience designing and teaching workshops and talks on modern JavaScript and
+        functional programming. I enjoy breaking down complex concepts into practical, approachable lessons for
+        audiences ranging from beginners to experienced developers.
       </Paragraph>
     </section>
   </div>
 
-  <section
-    class="relative pt-12 bg-slate-900 before:content-[''] before:absolute before:-top-[40px] before:left-0 before:w-0 before:h-0 before:border-t-40 before:border-t-transparent before:border-l-[100vw] before:border-l-slate-900 md:before:-top-[80px] md:before:border-t-80"
-  >
-    <div class="container mx-auto p-4">
+  <section class="bg-slate-900 pt-12">
+    <div class="mx-auto p-4 max-w-prose text-lg md:text-2xl md:p-8">
       <Heading id="dad-of-three" variant="indigo">Dad of three</Heading>
+      <Paragraph>And a husband to one ❤️.</Paragraph>
     </div>
     <Image
       src={family}
       alt="Abbe Keultjes and his family"
       title="I’m the second from the right 😉"
       layout="full-width"
+      class="z-10 relative"
     />
   </section>
 </article>

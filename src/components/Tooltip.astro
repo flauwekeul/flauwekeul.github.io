@@ -7,7 +7,7 @@ const { content } = Astro.props;
 const id = `tooltip-${Math.random().toString(36).substring(2, 7)}`;
 ---
 
-<span style={`anchor-name: --${id};`} class="peer cursor-help"><slot /></span><span
+<span style={`anchor-name: --${id};`} class="peer"><slot /></span><span
   style={`position-anchor: --${id}; position-area: top;`}
   class="fixed rounded-full bg-black/70 px-4 py-2 text-[80%] text-white opacity-0 transition-all peer-hover:-translate-y-1 peer-hover:opacity-100"
   >{content}</span

@@ -1,10 +1,13 @@
 ---
+import Tooltip from './Tooltip.astro';
+
 type Props = {
   href: string;
   openInNewTab?: boolean;
+  tooltip?: string;
 };
 
-const { href, openInNewTab = false } = Astro.props;
+const { href, openInNewTab = false, tooltip = null } = Astro.props;
 const target = openInNewTab ? '_blank' : null;
 const rel = openInNewTab ? 'noopener noreferrer' : null;
 ---
@@ -13,6 +16,13 @@ const rel = openInNewTab ? 'noopener noreferrer' : null;
   href={href}
   target={target}
   rel={rel}
-  class="text-teal-200 underline underline-offset-3 transition-colors hover:text-teal-300"
-  ><slot />{openInNewTab && <span class="ml-1 icon icon-rounded text-[90%] align-middle">open_in_new</span>}</a
+  class="text-teal-200 underline underline-offset-3 decoration-2 transition-colors hover:text-teal-300"
+  >{
+    tooltip ? (
+      // prettier-ignore
+      <Tooltip content={tooltip}><slot /></Tooltip>
+    ) : (
+      <slot />
+    )
+  }{openInNewTab && <span class="ml-1 icon icon-rounded text-[90%] align-middle">open_in_new</span>}</a
 >
