@@ -26,7 +26,7 @@ const yearsOfProfessionalCareer = yearsSince(START_OF_PROFESSIONAL_CAREER);
 ---
 
 <article>
-  <div class="w-full bg-linear-to-b from-blue-800 to-indigo-900 pb-24">
+  <div class="w-full bg-linear-to-b from-blue-800 via-indigo-900 to-slate-900 to-90%">
     <section class="mx-auto p-4 mb-48 max-w-prose text-lg md:text-2xl md:p-8">
       <h1
         class="font-serif text-7xl font-bold mt-36 mb-16 text-yellow-300 text-shadow-lg sm:mt-56 sm:text-9xl md:text-[9rem] md:mb-36 xl:max-w-fit xl:mx-auto"
@@ -92,13 +92,12 @@ const yearsOfProfessionalCareer = yearsSince(START_OF_PROFESSIONAL_CAREER);
         audiences ranging from beginners to experienced developers.
       </Paragraph>
     </section>
-  </div>
 
-  <section class="bg-slate-900 pt-12">
-    <div class="mx-auto p-4 max-w-prose text-lg md:text-2xl md:p-8">
-      <Heading id="dad-of-three" variant="indigo">Dad of three</Heading>
+    <section class="mx-auto p-4 max-w-prose text-lg md:text-2xl md:p-8">
+      <Heading id="dad-of-three">Dad of three</Heading>
       <Paragraph>And a husband to one ❤️.</Paragraph>
-    </div>
+    </section>
+
     <Image
       src={family}
       alt="Abbe Keultjes and his family"
@@ -106,5 +105,5 @@ const yearsOfProfessionalCareer = yearsSince(START_OF_PROFESSIONAL_CAREER);
       layout="full-width"
       class="z-10 relative"
     />
-  </section>
+  </div>
 </article>

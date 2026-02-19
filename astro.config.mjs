@@ -1,5 +1,6 @@
 // @ts-check
 import tailwindcss from '@tailwindcss/vite';
+import icon from 'astro-icon';
 import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
@@ -18,15 +19,10 @@ export default defineConfig({
         cssVariable: '--font-aleo',
         weights: [400, 700],
       },
-      // fixme: can't get this to work yet
-      // {
-      //   provider: fontProviders.googleicons(),
-      //   name: 'Material Symbols Outlined',
-      //   cssVariable: '--font-material-symbols',
-      // }
     ],
   },
   vite: {
     plugins: [tailwindcss()],
   },
+  integrations: [icon()],
 });

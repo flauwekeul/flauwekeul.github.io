@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 import Tooltip from './Tooltip.astro';
 
 type Props = {
@@ -24,5 +25,5 @@ const rel = openInNewTab ? 'noopener noreferrer' : null;
     ) : (
       <slot />
     )
-  }{openInNewTab && <span class="ml-1 icon icon-rounded text-[90%] align-middle">open_in_new</span>}</a
+  }{openInNewTab && <Icon name="mdi:open-in-new" class="inline-block ml-1" />}</a
 >
