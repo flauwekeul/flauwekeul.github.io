@@ -6,8 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "build-and-deploy": "./build-and-deploy.sh"
+    "astro": "astro"
   },
   "dependencies": {
     "@iconify-json/mdi": "1.2.3",
